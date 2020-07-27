@@ -1,0 +1,29 @@
+{
+  "name": "example-1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./src/index.js",
+  "scripts": {
+    "start": "node ./src/index.js",
+    "start:dev": "nodemon  --legacy-watch ./src/index.js"
+  },
+  "keywords": [
+    "javascript",
+    "fullstack",
+    "Nodejs",
+    "Node.js",
+    "frontend",
+    "backend"
+  ],
+  "author": "ashley@codecapers.com.au",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "miniql": "0.0.6",
+    "mongodb": "^3.5.9"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}

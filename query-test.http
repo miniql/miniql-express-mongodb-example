@@ -1,0 +1,98 @@
+
+# Get all species.
+
+GET http://localhost:3000/query
+Content-Type: application/json
+
+{
+    "query": {
+        "get": {
+            "species": {
+            }
+        }
+    }
+}
+
+###
+
+# Get a single species.
+
+GET http://localhost:3000/query
+Content-Type: application/json
+
+{
+    "query": {
+        "get": {
+            "species": {
+                "args": {
+                    "name": "Hutt"
+                }
+            }
+        }
+    }
+}
+
+###
+
+# Get a single species with nested entity lookup.
+
+GET http://localhost:3000/query
+Content-Type: application/json
+
+{
+    "query": {
+        "get": {
+            "species": {
+                "args": {
+                    "name": "Hutt"
+                },
+                "resolve": {
+                    "homeworld": {
+                    }
+                }
+            }
+        }
+    }
+}
+
+###
+
+# Get all species with nested entity lookup.
+
+GET http://localhost:3000/query
+Content-Type: application/json
+
+{
+    "query": {
+        "get": {
+            "species": {
+                "resolve": {
+                    "homeworld": {
+                    }
+                }
+            }
+        }
+    }
+}
+
+###
+
+# Get all planets with nested entity lookup.
+
+GET http://localhost:3000/query
+Content-Type: application/json
+
+{
+    "query": {
+        "get": {
+            "planet": {
+                "resolve": {
+                    "species": {
+                    }
+                }
+            }
+        }
+    }
+}
+
+###
