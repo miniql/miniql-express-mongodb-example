@@ -3,19 +3,15 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>No longer the simplest possible frontend!</title>
+        <title>MiniQL MongoDB Example</title>
     </head>
     <body>
-        <p>
-            This list of data retreived from the backend: 
-        </p>
-        <p id="msgs" style="font-weight: bold">
+        <h1>
+            Planets in Star Wars and their native species
+        </h1>
+        <ul id="query-result">
             <!-- Data retreived from the backend will be dynamically inserted here. -->
-        </p>
-
-        <button onclick="onButtonClick()">
-            Click me!
-        </button>
+        </ul>
 
         <!-- 
         Loading JavaScript at the end of the body means we can safely access all elements in the DOM.

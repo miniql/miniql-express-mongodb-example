@@ -1,10 +1,24 @@
 
-function onButtonClick() {
-    alert("That was an awesome button click! Please do it again :)");
+const query = {
+    get: {
+        planets: { // Gets all planets.
+            from: "planet",
+            resolve: {
+                species: { // With nested species lookup.
+                }
+            }
+        }
+    }
 }
 
 // Load data from the backend using a REST API.
-fetch("/my-rest-api")
+fetch("/query", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ query: query }),
+    })
     .then(response => {
         // Log the response so we can see it in the browser console.
         console.log("Retreived response:");
@@ -13,15 +27,30 @@ fetch("/my-rest-api")
         // Extract JSON data from the response body.
         return response.json();
     })
-    .then(data => {
+    .then(queryResult => {
         // Render the message from the response in the browser window.
-        const messageElement = document.getElementById("msgs");
+        console.log("Parsed query result:");
+        console.log(queryResult);
 
-        // Loop through all data records and the text to the DOM.
-        for (const record of data) {
-            const newTextElement = document.createTextNode(record.msg);
-            const newDivElement = document.createElement("div");
-            newDivElement.appendChild(newTextElement);
-            messageElement.appendChild(newDivElement);
+        const resultsElement = document.getElementById("query-result");
+
+        // Loop through all entities and add the text to the DOM.
+        const planets = queryResult.data.planets;
+        for (const planet of planets) {
+            const planetNameElement = document.createTextNode(planet.name);
+            const planetItemElement = document.createElement("li");
+            planetItemElement.appendChild(planetNameElement);
+            resultsElement.appendChild(planetItemElement);
+
+            const speciesListElement = document.createElement("ul");
+
+            for (const species of planet.species) {
+                const speciesNameElement = document.createTextNode(species.name);
+                const speciesItemElement = document.createElement("li");
+                speciesItemElement.appendChild(speciesNameElement);
+                speciesListElement.appendChild(speciesItemElement);
+            }
+
+            planetItemElement.appendChild(speciesListElement);
         }
     });

@@ -102,9 +102,9 @@ async function main() {
     };
     
     //
-    // HTTP GET route for queries.
+    // HTTP POST route for queries.
     //
-    app.get("/query", (req, res) => {
+    app.post("/query", (req, res) => {
        
         miniql(req.body.query, queryResolver, {})
             .then(queryResult => {

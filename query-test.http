@@ -1,7 +1,7 @@
 
 # Get all species.
 
-GET http://localhost:3000/query
+POST http://localhost:3000/query
 Content-Type: application/json
 
 {
@@ -17,7 +17,7 @@ Content-Type: application/json
 
 # Get a single species.
 
-GET http://localhost:3000/query
+POST http://localhost:3000/query
 Content-Type: application/json
 
 {
@@ -36,7 +36,7 @@ Content-Type: application/json
 
 # Get a single species with nested entity lookup.
 
-GET http://localhost:3000/query
+POST http://localhost:3000/query
 Content-Type: application/json
 
 {
@@ -59,7 +59,7 @@ Content-Type: application/json
 
 # Get all species with nested entity lookup.
 
-GET http://localhost:3000/query
+POST http://localhost:3000/query
 Content-Type: application/json
 
 {
@@ -79,7 +79,7 @@ Content-Type: application/json
 
 # Get all planets with nested entity lookup.
 
-GET http://localhost:3000/query
+POST http://localhost:3000/query
 Content-Type: application/json
 
 {
