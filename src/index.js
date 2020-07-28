@@ -89,13 +89,23 @@ async function main() {
         update: {
             species: {
                 invoke: async (args, context) => {
-                    //todo:
+                    await speciesCollection.updateOne(
+                        { name: args.name }, 
+                        { 
+                            $set: args.set,
+                        }
+                    );
                 },
             },
 
             planet: {
                 invoke: async (args, context) => {
-                    //todo:
+                    await planet.updateOne(
+                        { name: args.name }, 
+                        { 
+                            $set: args.set,
+                        }
+                    );
                 },
             },
         },

@@ -1,0 +1,27 @@
+
+###
+
+# Update a single species.
+
+POST http://localhost:3000/query
+Content-Type: application/json
+
+{
+    "query": {
+        "update": {
+            "species": {
+                "args": {
+                    "name": "Hutt",
+                    "set": {
+                        "classification": "reptile"
+                    }
+                }
+            }
+        }
+    }
+}
+
+###
+
+
+
