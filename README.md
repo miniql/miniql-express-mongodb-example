@@ -8,7 +8,7 @@ Example [Star Wars data is courtesy of Kaggle](https://www.kaggle.com/jsphyg/sta
 
 Any problems? Please log an issue on this repo.
 
-Love this? Please [star the repo](https://github.com/miniql/miniql) and [follow the developer on Twitter](https://twitter.com/ashleydavis75).
+Love this? Please [star the repo](https://github.com/miniql/miniql) and [support my work](https://www.codecapers.com.au/about#support-my-work)
 
 # Setup
 
