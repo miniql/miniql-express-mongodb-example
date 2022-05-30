@@ -92,4 +92,4 @@ It makes a REST API call to the backend to execute a MiniQL query. The result of
 
 Please also check out the files `query-test.http` and `update-test.http` these contain a bunch of HTTP requests for queries that you can invoke using the Visual Studio Code plugin [Rest Client](https://marketplace.visualstudio.com/items?itemName=humao.rest-client) (check it out - it's awesome!).
 
-Don't forget to [star the repo](https://github.com/miniql/miniql) and [follow the developer on Twitter](https://twitter.com/ashleydavis75).
+Don't forget to [star the repo](https://github.com/miniql/miniql) and [follow the developer on Twitter](https://twitter.com/codecapers).
